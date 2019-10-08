@@ -7,9 +7,9 @@
     "start": "per-env",
     "start:production": "npm run -s serve",
     "start:development": "npm run -s dev",
-    "build": "npx tsm src; preact build",
-    "serve": "npx tsm src -w; preact build && preact serve",
-    "dev": "npx tsm src -w; preact watch",
+    "build": "concurrently \"npx tsm src\" \"preact build\"",
+    "serve": "concurrently \"npx tsm src -w\" \"preact build && preact watch\"",
+    "dev": "concurrently \"npx tsm src -w\" \"preact watch\"",
     "lint": "eslint src",
     "test": "jest"
   },
@@ -36,6 +36,7 @@
     "webpack": "^4.41.0"
   },
   "dependencies": {
+    "concurrently": "^5.0.0",
     "preact": "^10.0.0-rc.3",
     "preact-compat": "^3.17.0",
     "preact-render-to-string": "^4.1.0",
