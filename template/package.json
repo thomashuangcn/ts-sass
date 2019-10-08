@@ -7,9 +7,9 @@
     "start": "per-env",
     "start:production": "npm run -s serve",
     "start:development": "npm run -s dev",
-    "build": "npx tsm src && preact build",
-    "serve": "npx tsm src -w && preact build && preact serve",
-    "dev": "npx tsm src -w && preact watch",
+    "build": "npx tsm src; preact build",
+    "serve": "npx tsm src -w; preact build && preact serve",
+    "dev": "npx tsm src -w; preact watch",
     "lint": "eslint src",
     "test": "jest"
   },
