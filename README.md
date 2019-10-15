@@ -6,12 +6,13 @@
     [preact-cli](https://github.com/developit/preact-cli).
 -   [For Preact](https://preactjs.com/): General information about how to work
     with Preact, not specific to this template
+-   Interested in automated boilerplate generation for components and routes for your Preact X projects? Check out this awesome cli at https://github.com/IntuitiveInformatics/preact-custom-cli
 
 ## Usage
 
 ```bash
 $ npm install -g preact-cli
-$ preact create typescript my-project
+$ preact create thomashuangcn/ts-sass my-project
 $ cd my-project
 $ npm install
 $ npm run dev
@@ -27,7 +28,7 @@ your stylesheets with the `.scss` extension and generate the appropriate declara
 However, a declarations file will only be generated when the stylesheet contains at least one
 class-based or id-based declaration block with valid declarations as the block content.
 
-When you run `npm run build`, the "typed-scss-module" library will run one more time to ensure that 
+When you run `npm run build`, the "typed-scss-module" library will run exactly once to ensure that 
 all `.scss` stylesheets have appropriate declaration files before production build.
 
 You may also run `npx tsm src` in the root directory of the project to manually generate declaration 
